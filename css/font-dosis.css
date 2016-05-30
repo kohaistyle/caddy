@@ -1,0 +1,23 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Dosislight';
+  font-style: normal;
+  font-weight: normal;    
+  src: url('./css/Dosis-200.otf'), url('./css/Dosis-200.ttf') format('truetype');
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./css/Dosis-reguler.otf'), url('./css/Dosis-regular.ttf') format('truetype');
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Dosisbold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./css/Dosis-700.otf'), url('./css/Dosis-700.ttf') format('truetype');
+}

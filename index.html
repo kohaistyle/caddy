@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Golf</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta charset="UTF-8">
+    <link href='css/font-dosis.css' rel='stylesheet' type='text/css'>
+<!-- <link href='http://fonts.googleapis.com/css?family=Dosis:200,400,700' rel='stylesheet' type='text/css'>    --> 
+        
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/icoMoon.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <style>
+      /* TODO */
+    </style>
+  </head>
+
+  <body>
+
+  <div class="dimmer">
+    <div class="progress orange lighten-5">
+        <div class="indeterminate orange"></div>
+    </div>
+  </div>
+   
+  <div class="notif">
+    notification
+  </div>
+
+    <!-- Page Home ------------------------------------------------------------ -->
+    <div class="app-page" data-page="dashboard">
+      <div class="app-topbar orange">
+        <div class="app-title"><strong>CADDY</strong></div>
+        <div class="app-button right" data-target="settings"> <span class="icon icon-cog"></span></div>
+      </div>
+      <div class="app-content">
+
+      <div class="row left-align">      
+        <div style="padding: 0px !important" class="col s12 m12 l6">
+          <img style=" width: 100%; margin-top: -15px;" src="img/green1.jpg">       
+        </div>
+
+      
+          <a class="app-button col s12 m12 l6 waves-effect waves-light btn-large green " data-target="tournois"><span class="icon icon-dice"></span> TOURNOIS</a>
+              
+          <a class="app-button col s12 m12 l6 waves-effect waves-light btn-large light-green " data-target="leaderboard"><span class="icon icon-earth"></span> LEADERBOARD</a>
+
+          <a class="app-button col s12 m12 l6 waves-effect waves-light btn-large lime " data-target="joueurs"><span class="icon icon-users"></span> JOUEURS</a>
+
+      </div>
+      
+      </div>
+    </div>
+
+    <!-- Page Leaderboard ------------------------------------------------------------ -->
+    <div class="app-page" data-page="leaderboard">
+      <div class="app-topbar blue">
+        <div class="app-button" data-target="dashboard"><span class="icon icon-circle-left"></span></div>
+        <div class="app-title"><strong>LEADERBOARD</strong></div>
+      </div>
+      <div class="app-content">
+      
+      <div class="tableheader">
+        <table class="centered">
+          <thead>
+            <tr>
+                <th data-field="id">Joueur</th>
+                <th data-field="name">Progression</th>
+                <th data-field="price">Score</th>
+            </tr>
+          </thead>
+          </table>
+      </div>
+      
+      
+        <table class="centered">
+          <thead>
+            <tr>
+                <th data-field="id">Name</th>
+                <th data-field="name">Item Name</th>
+                <th data-field="price">Item Price</th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            <tr>
+              <td>Alvin</td>
+              <td>Eclair</td>
+              <td>$0.87</td>
+            </tr>
+            <tr>
+              <td>Alan</td>
+              <td>Jellybean</td>
+              <td>$3.76</td>
+            </tr>
+            <tr>
+              <td>Jonathan</td>
+              <td>Lollipop</td>
+              <td>$7.00</td>
+            </tr>
+            <tr>
+              <td>Alvin</td>
+              <td>Eclair</td>
+              <td>$0.87</td>
+            </tr>
+            <tr>
+              <td>Alan</td>
+              <td>Jellybean</td>
+              <td>$3.76</td>
+            </tr>
+            <tr>
+              <td>Jonathan</td>
+              <td>Lollipop</td>
+              <td>$7.00</td>
+            </tr>
+            <tr>
+              <td>Alvin</td>
+              <td>Eclair</td>
+              <td>$0.87</td>
+            </tr>
+            <tr>
+              <td>Alan</td>
+              <td>Jellybean</td>
+              <td>$3.76</td>
+            </tr>
+            <tr>
+              <td>Jonathan</td>
+              <td>Lollipop</td>
+              <td>$7.00</td>
+            </tr>
+            <tr>
+              <td>Alan</td>
+              <td>Jellybean</td>
+              <td>$3.76</td>
+            </tr>
+            <tr>
+              <td>Jonathan</td>
+              <td>Lollipop</td>
+              <td>$7.00</td>
+            </tr>
+            <tr>
+              <td>Alvin</td>
+              <td>Eclair</td>
+              <td>$0.87</td>
+            </tr>
+            <tr>
+              <td>Alan</td>
+              <td>Jellybean</td>
+              <td>$3.76</td>
+            </tr>
+            <tr>
+              <td>Jonathan</td>
+              <td>Lollipop</td>
+              <td>$7.00</td>
+            </tr>
+          </tbody>
+        </table> 
+        
+      </div>
+    </div>
+    
+    <!-- Page Tournois ------------------------------------------------------------ -->
+    <div class="app-page" data-page="tournois">
+      <div class="app-topbar blue">
+        <div class="app-button" data-target="dashboard"><span class="icon icon-circle-left"></span></div>
+        <div class="app-title"><strong>TOURNOIS</strong></div>
+      </div>
+      <div class="app-content">
+
+      <div class="row">      
+        <div style="padding: 0px !important" class="col s12 m12 l6">
+          <img style=" width: 100%; margin-top: -100px;" src="img/green1.jpg">
+        </div>
+      </div>
+
+      
+          <!-- way.js  -->
+
+          <div id="tournamentlist" class="collection">
+            <div class="collection-item" way-repeat="tournamentlist">
+                <div ><strong><span way-data="to_name"></span> </strong></div>
+
+                <div class="tournoisdata">
+                  <p>lorem ipsum</p>
+
+                  <a id="tournament$$key" data-id="$$key" onclick="tournamentSelect(this)" class="tournament right waves-effect waves-light btn ">Sélectionner</a>
+                  <span way-data="to_id"></span>
+                  
+                </div>
+
+              </div>
+          </div>
+        
+
+        
+      </div>
+    </div>
+
+    <!-- Page Joueurs ------------------------------------------------------------ -->
+    <div class="app-page" data-page="joueurs">
+      <div class="app-topbar blue">
+        <div class="app-button" data-target="dashboard"><span class="icon icon-circle-left"></span></div>
+        <div class="app-title"><strong>JOUEURS</strong></div>
+        <div style="background-image: url('img/green1.jpg'); background-size: cover">
+
+             <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Trou 1</div>
+                    <div class="swiper-slide">Trou 2</div>
+                    <div class="swiper-slide">Trou 3</div>
+                    <div class="swiper-slide">Trou 4</div>
+                    <div class="swiper-slide">Trou 5</div>
+                    <div class="swiper-slide">Trou 6</div>
+                    <div class="swiper-slide">Trou 7</div>
+                    <div class="swiper-slide">Trou 8</div>
+                    <div class="swiper-slide">Trou 9</div>
+                    <div class="swiper-slide">Trou 10</div>
+                </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+            </div>
+
+
+        </div>
+
+      </div>
+      <div class="app-content">
+
+      <div class="row">      
+
+
+          <!-- way.js  -->
+
+          <div id="playerlist" class="collection">
+            <div class="collection-item" way-repeat="playerlist">
+                <div class="expander" onclick="expand(this)" ><strong><span way-data="tp_lastname">.</span> <span way-data="tp_firstname">.</span><input type="text" class="bigbadge" id="holescore" way-data="score"></strong></div>
+                <div class="collectiondata" >
+
+                <p>Coups : 2 - Total : 15</p>
+
+                <div class="scorechanger" >
+                    <div class="mbn">
+                     <div class="row">
+                      <div style="height: 150px" onclick="less1($$key)" class="col s4 center-align"><div class="app-button less1"><span style="font-size:2em;" class="icon icon-circle-left"></span></div></div>
+                      <div style="height: 150px" class="col s4 center-align"><div style="margin-top: 25%"><span id="holescore$$key" style="font-size:3em;" way-data="score">0</span></div></div>
+                      <div style="height: 150px" onclick="plus1($$key)" class="col s4 center-align"><div class="app-button plus1"><span style="font-size:2em" class="icon icon-circle-right"></span></div></div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              </div>
+          </div>
+
+          <a id="playerToJson" class="waves-effect waves-light btn ">toJson</a>
+
+           <pre way-data="scorelist" way-json="true" way-default="{}"></pre>
+
+
+      </div>
+
+
+      </div>
+
+    </div>
+    
+    <!-- Page Settings ------------------------------------------------------------ -->
+    <div class="app-page" data-page="settings">
+      <div class="app-topbar red">
+        <div class="app-button" data-target="dashboard"><span class="icon icon-circle-left"></span></div>
+        <div class="left" data-target="dashboard"></div>
+        <div class="app-title"><strong>SETTINGS</strong></div>
+      </div>
+      <div class="app-content">
+
+        <br/>
+
+        <div class="center-align app-section">
+        
+          <div id="result" style="display:none">
+           
+           <form id="playerSelection"></form>
+
+          <a id="setSelection" class="waves-effect waves-light btn ">Envoyer</a>
+                     
+        </div>
+          
+          <a id="getSelection" class="waves-effect waves-light btn">Voir selection</a>
+          <a id="unlockDevice" class="waves-effect waves-light btn ">Unlock</a>
+          
+    
+        </div>
+
+        <div class="app-section">
+          <input class="app-input" placeholder="Subject">
+          <textarea class="app-input" placeholder="Message"></textarea>
+          <div class="row">
+            <a class="col s12 waves-effect waves-light btn lime lighten-1">Envoyez</a>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+
+    <script src="js/app.min.js"></script>
+    <script src="js/way.min.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script src="js/swiper.min.js"></script>
+
+    <script src="js/index.js"></script>
+    
+
+  </body>
+</html>
